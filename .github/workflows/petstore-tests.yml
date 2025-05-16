@@ -7,17 +7,17 @@ on:
 
 jobs:
   karate-tests:
-  runs-on: ubuntu-latest
+    runs-on: ubuntu-latest
 
-  steps:
-  - name: Clonar el código
-    uses: actions/checkout@v3
+    steps:
+      - name: Clonar el código
+        uses: actions/checkout@v3
 
-  - name: Configurar Java
-    uses: actions/setup-java@v3
-    with:
-      java-version: '21'
-      distribution: 'temurin'
+      - name: Configurar Java
+        uses: actions/setup-java@v3
+        with:
+          java-version: '21'
+          distribution: 'temurin'
 
-  - name: Ejecutar pruebas Karate
-    run: mvn test -Dtest=PetTestRunner
+      - name: Ejecutar pruebas Karate
+        run: mvn test -Dtest=PetTestRunner
